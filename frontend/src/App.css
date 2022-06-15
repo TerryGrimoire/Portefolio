@@ -1,56 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap');
+/** --------------------------------------------------- CSS Variables ---------------------------------------------------  **/
+:root {
+  /** Color variables **/
+  --dark-color: black;
+  --light-color: white; 
+  --other-color: blueviolet; 
+  
+  /** font variables **/ 
+  --title-font-family: 'Ingrid Darling', cursive;
+  --text-font-family:  ; 
+  --title-font-size-mobile: ;
+  --text-font-size-mobile: ;
+  --title-font-size-desktop: 6rem ;
+  --text-font-size-desktop: 1.2rem ;
   }
+  /** --------------------------------------------------- All ---------------------------------------------------  **/
+
+* { 
+  box-sizing: border-box;
+  margin: 0; 
+}
+h1 {
+  font-size: 10rem;
+  font-family: var(--title-font-family);
+  padding: 3rem;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 2rem;
+}
+.container {
+  background-color: var(--other-color);
+  color: var(--dark-color);
+  transition: 5s ease-in-outcdcd p;
+}
+
+ .background_effect {
+  background-image: url("./assets/Sans_titre.gif");
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-position: -15%;
+}
+
+.bad {
+  background-color: var(--dark-color);
+  color: red;
+
+}
+
+.good {
+  background-color: var(--light-color);
+  color: red;
+}
+
+header {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.no_button {
+  border: none;
+  background-color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.arrow_button {
+  width: 12%;
+  transition: all ease-in-out 5s;
+  cursor: pointer;
+  animation: pulse 2s infinite ;
+}
+
+.arrow_button:hover {
+  transform: rotate(360deg);
+  transition: all ease-in-out 5s;
+}
+
+@keyframes pulse {
+  0% { transform:  scale(0.8);}
+  50% {transform:  scale(1.1);}
+  100% {transform: scale(0.8);
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.buttons_container {
+  display: flex;
+  justify-content: space-around;
+}
+.button_style {
+  padding: 2rem 1rem;
+  margin: 0 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.white {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: var(--dark-color) solid 1px;
+}
+
+.black {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border:var(--light-color) solid 1px;
+}
+
+.welcome_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 25vh;
 }
