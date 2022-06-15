@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashLink } from "react-router-hash-link";
 
-import arrow from "../assets/arrow.png";
 import "../App.css";
 
 export default function Header({ setBgColor }) {
@@ -24,11 +22,11 @@ export default function Header({ setBgColor }) {
   }, [good, bad]);
 
   return (
-    <header>
-      <section className="welcome_section">
+    <header className="section_container">
+      <div className="welcome_section">
         <h1> Welcome to my Grimoire !</h1>
         <h2>Are you a good witch or a bad witch ?</h2>
-      </section>
+      </div>
 
       <div className="buttons_container">
         <button
@@ -46,15 +44,6 @@ export default function Header({ setBgColor }) {
           Bad Witch
         </button>
       </div>
-      {good || bad ? (
-        <HashLink to="#About_me">
-          <button type="button" className="no_button">
-            <img src={arrow} alt="arrow" className="arrow_button" />
-          </button>
-        </HashLink>
-      ) : (
-        ""
-      )}
     </header>
   );
 }

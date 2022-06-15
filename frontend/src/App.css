@@ -1,30 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap");
 /** --------------------------------------------------- CSS Variables ---------------------------------------------------  **/
 :root {
   /** Color variables **/
   --dark-color: black;
-  --light-color: white; 
-  --other-color: blueviolet; 
-  
-  /** font variables **/ 
-  --title-font-family: 'Ingrid Darling', cursive;
-  --text-font-family:  ; 
+  --light-color: white;
+  --other-color: blueviolet;
+
+  /** font variables **/
+  --title-font-family: "Ingrid Darling", cursive;
+  --text-font-family: ;
   --title-font-size-mobile: ;
   --text-font-size-mobile: ;
-  --title-font-size-desktop: 6rem ;
-  --text-font-size-desktop: 1.2rem ;
-  }
-  /** --------------------------------------------------- All ---------------------------------------------------  **/
+  --title-font-size-desktop: 6rem;
+  --text-font-size-desktop: 1.2rem;
+}
+/** --------------------------------------------------- All ---------------------------------------------------  **/
 
-* { 
+* {
   box-sizing: border-box;
-  margin: 0; 
+  margin: 0;
 }
 h1 {
   font-size: 10rem;
   font-family: var(--title-font-family);
   padding: 3rem;
+}
 
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 h2 {
@@ -36,9 +43,9 @@ h2 {
   transition: 5s ease-in-outcdcd p;
 }
 
- .background_effect {
+.background_effect {
   background-image: url("./assets/Sans_titre.gif");
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: -15%;
 }
@@ -46,7 +53,6 @@ h2 {
 .bad {
   background-color: var(--dark-color);
   color: red;
-
 }
 
 .good {
@@ -55,7 +61,6 @@ h2 {
 }
 
 header {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +76,7 @@ header {
   width: 12%;
   transition: all ease-in-out 5s;
   cursor: pointer;
-  animation: pulse 2s infinite ;
+  animation: pulse 2s infinite;
 }
 
 .arrow_button:hover {
@@ -80,9 +85,14 @@ header {
 }
 
 @keyframes pulse {
-  0% { transform:  scale(0.8);}
-  50% {transform:  scale(1.1);}
-  100% {transform: scale(0.8);
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.8);
   }
 }
 .buttons_container {
@@ -106,7 +116,7 @@ header {
 .black {
   background-color: var(--dark-color);
   color: var(--light-color);
-  border:var(--light-color) solid 1px;
+  border: var(--light-color) solid 1px;
 }
 
 .welcome_section {
@@ -115,4 +125,21 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 25vh;
+}
+
+.section_container {
+  min-height: 90vh;
+  width: 100%;
+  padding: 2rem 15rem;
+}
+
+.img_medium_size {
+  height: 50vh;
+  border-radius: 1rem;
+}
+
+.basic_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

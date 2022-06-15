@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import Header from "../components/header";
+import AboutMe from "../components/AboutMe";
+import arrow from "../assets/arrow.png";
 
 import "../App.css";
 
@@ -8,7 +11,17 @@ export default function Home() {
 
   return (
     <main className={bgColor}>
-      <Header setBgColor={setBgColor} />
+      <section>
+        <Header setBgColor={setBgColor} />
+        <HashLink to="#About">
+          <button type="button" className="no_button">
+            <img src={arrow} alt="arrow" className="arrow_button" />
+          </button>
+        </HashLink>
+      </section>
+      <section>
+        <AboutMe />
+      </section>
     </main>
   );
 }
