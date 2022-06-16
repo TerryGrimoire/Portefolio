@@ -8,6 +8,7 @@ import "../App.css";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("container");
+  const [ouija, setOuija] = useState("arrow_button");
 
   return (
     <main className={bgColor}>
@@ -15,12 +16,29 @@ export default function Home() {
         <Header setBgColor={setBgColor} />
         <HashLink to="#About">
           <button type="button" className="no_button">
-            <img src={arrow} alt="arrow" className="arrow_button" />
+            <img
+              src={arrow}
+              alt="arrow"
+              className={ouija}
+              onMouseEnter={() => setOuija("arrow_button_hover")}
+              onMouseLeave={() => setOuija("arrow_button")}
+            />
           </button>
         </HashLink>
       </section>
       <section>
         <AboutMe />
+        <HashLink to="#About">
+          <button type="button" className="no_button">
+            <img
+              src={arrow}
+              alt="arrow"
+              className={ouija}
+              onMouseEnter={() => setOuija("arrow_button_hover")}
+              onMouseLeave={() => setOuija("arrow_button")}
+            />
+          </button>
+        </HashLink>
       </section>
     </main>
   );

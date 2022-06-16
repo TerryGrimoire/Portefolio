@@ -2,9 +2,11 @@
 /** --------------------------------------------------- CSS Variables ---------------------------------------------------  **/
 :root {
   /** Color variables **/
-  --dark-color: black;
-  --light-color: white;
+  --dark-color: #080F0F;
+  --light-color: #F9E7E7;
   --other-color: blueviolet;
+  --text-dark-color: #CC2500;
+  --text-light-color: #89023E;
 
   /** font variables **/
   --title-font-family: "Ingrid Darling", cursive;
@@ -27,11 +29,12 @@ h1 {
 }
 
 section {
-  min-height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
 }
 
 h2 {
@@ -52,12 +55,16 @@ h2 {
 
 .bad {
   background-color: var(--dark-color);
-  color: red;
+  color: var(--text-dark-color);
+  transition: 2s ease-in-out all;
+  animation : color-change linear ; 
 }
 
 .good {
   background-color: var(--light-color);
-  color: red;
+  color: var(--text-light-color);
+  transition: 2s ease-in-out all;
+  animation : color-change linear ; 
 }
 
 header {
@@ -73,28 +80,62 @@ header {
 }
 
 .arrow_button {
-  width: 12%;
+  width: 25%;
   transition: all ease-in-out 5s;
   cursor: pointer;
-  animation: pulse 2s infinite;
+  animation: ouija 20s infinite;
 }
 
-.arrow_button:hover {
-  transform: rotate(360deg);
+.arrow_button_hover {
+  width: 25%;
   transition: all ease-in-out 5s;
-}
+  cursor: pointer;
+  animation: ouija2 0.3s;
+  animation-fill-mode: forwards;
+ }
 
-@keyframes pulse {
+@keyframes ouija {
   0% {
-    transform: scale(0.8);
+            transform: translate(0);
   }
-  50% {
-    transform: scale(1.1);
+  20% {
+            transform: translate(-8px, 8px) rotate(30deg);
+  }
+  40% {
+            transform: translate(8px, 40px);
+  }
+  60% {
+            transform: translate(20px, 40px);
+  }
+  80% {
+            transform: translate(-8px, 48px) rotate(-20deg);
   }
   100% {
-    transform: scale(0.8);
+            transform: translate(0);
   }
 }
+
+@keyframes ouija2 {
+  0% {
+            transform: rotate(0deg);
+  }
+  20% {
+            transform: rotate(36deg);
+  }
+  40% {
+            transform: rotate(72deg);
+  } 
+  60% {
+            transform: rotate(108deg);
+  }
+  80% {
+            transform: rotate(144deg);
+  }
+  100% {
+            transform: rotate(180deg);
+  }
+}
+
 .buttons_container {
   display: flex;
   justify-content: space-around;
@@ -111,12 +152,16 @@ header {
   background-color: var(--light-color);
   color: var(--dark-color);
   border: var(--dark-color) solid 1px;
+  transition: 2s ease-in-out all;
+  animation : color-change linear ; 
 }
 
 .black {
   background-color: var(--dark-color);
   color: var(--light-color);
   border: var(--light-color) solid 1px;
+  transition: 2s ease-in-out all;
+  animation : color-change linear ; 
 }
 
 .welcome_section {
@@ -142,4 +187,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@keyframes color-change {
+  0% {
+    opacity: 0%
+  }
+  50% {
+    opacity: 50%
+    ;
+  }
+  100% {
+    opacity: 100%
+
+  }
 }
