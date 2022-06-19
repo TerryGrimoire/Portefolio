@@ -2,11 +2,11 @@
 /** --------------------------------------------------- CSS Variables ---------------------------------------------------  **/
 :root {
   /** Color variables **/
-  --dark-color: #080F0F;
-  --light-color: #F9E7E7;
+  --dark-color: #080f0f;
+  --light-color: #f9e7e7;
   --other-color: blueviolet;
-  --text-dark-color: #CC2500;
-  --text-light-color: #89023E;
+  --text-dark-color: #cc2500;
+  --text-light-color: #89023e;
 
   /** font variables **/
   --title-font-family: "Ingrid Darling", cursive;
@@ -22,11 +22,6 @@
   box-sizing: border-box;
   margin: 0;
 }
-h1 {
-  font-size: 10rem;
-  font-family: var(--title-font-family);
-  padding: 3rem;
-}
 
 section {
   height: 90vh;
@@ -37,8 +32,16 @@ section {
   margin-bottom: 5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 h2 {
   font-size: 2rem;
+  animation: appear 5s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .container {
   background-color: var(--other-color);
@@ -57,14 +60,14 @@ h2 {
   background-color: var(--dark-color);
   color: var(--text-dark-color);
   transition: 2s ease-in-out all;
-  animation : color-change linear ; 
+  animation: color-change linear;
 }
 
 .good {
   background-color: var(--light-color);
   color: var(--text-light-color);
   transition: 2s ease-in-out all;
-  animation : color-change linear ; 
+  animation: color-change linear;
 }
 
 header {
@@ -92,47 +95,47 @@ header {
   cursor: pointer;
   animation: ouija2 0.3s;
   animation-fill-mode: forwards;
- }
+}
 
 @keyframes ouija {
   0% {
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
-            transform: translate(-8px, 8px) rotate(30deg);
+    transform: translate(-8px, 8px) rotate(30deg);
   }
   40% {
-            transform: translate(8px, 40px);
+    transform: translate(8px, 40px);
   }
   60% {
-            transform: translate(20px, 40px);
+    transform: translate(20px, 40px);
   }
   80% {
-            transform: translate(-8px, 48px) rotate(-20deg);
+    transform: translate(-8px, 48px) rotate(-20deg);
   }
   100% {
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 
 @keyframes ouija2 {
   0% {
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   20% {
-            transform: rotate(36deg);
+    transform: rotate(36deg);
   }
   40% {
-            transform: rotate(72deg);
-  } 
+    transform: rotate(72deg);
+  }
   60% {
-            transform: rotate(108deg);
+    transform: rotate(108deg);
   }
   80% {
-            transform: rotate(144deg);
+    transform: rotate(144deg);
   }
   100% {
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -141,27 +144,32 @@ header {
   justify-content: space-around;
 }
 .button_style {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   margin: 0 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
+  width: 13rem;
+  animation: appear 5s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .white {
   background-color: var(--light-color);
   color: var(--dark-color);
-  border: var(--dark-color) solid 1px;
+  border: none;
   transition: 2s ease-in-out all;
-  animation : color-change linear ; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .black {
   background-color: var(--dark-color);
   color: var(--light-color);
-  border: var(--light-color) solid 1px;
+  border: none;
   transition: 2s ease-in-out all;
-  animation : color-change linear ; 
+  box-shadow: rgba(1, 42, 28, 0.35) 0px 5px 15px;
 }
 
 .welcome_section {
@@ -175,7 +183,7 @@ header {
 .section_container {
   min-height: 90vh;
   width: 100%;
-  padding: 2rem 15rem;
+  padding: 2rem 5rem;
 }
 
 .img_medium_size {
@@ -185,20 +193,68 @@ header {
 
 .basic_flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 15rem;
+  text-align: center;
 }
 
 @keyframes color-change {
   0% {
-    opacity: 0%
+    opacity: 0%;
   }
   50% {
-    opacity: 50%
-    ;
+    opacity: 50%;
   }
   100% {
-    opacity: 100%
-
+    opacity: 100%;
   }
+}
+
+h1 {
+  font-size: 10rem;
+  font-family: var(--title-font-family);
+  padding: 3rem;
+  line-height: 1;
+  animation: letterspacing 8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes letterspacing {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.section_container2 {
+  padding: 0 15rem;
+}
+
+.logo_skills {
+  height: 7rem;
+  padding: 2rem 3rem 1rem;
+}
+
+.skill_container {
+  padding: 2rem 0;
 }

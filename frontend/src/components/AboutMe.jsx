@@ -3,23 +3,18 @@ import terry from "../assets/terry.png";
 
 function AboutMe() {
   return (
-    <div id="About" className="section_container">
+    <div id="About" className="section_container2">
       <h3>Terry Grimoire</h3>
       <div className="basic_flex">
         <img src={terry} alt="terry" className="img_medium_size" />
         <p>
-          a explicabo quisquam blanditiis quae perspiciatis quibusdam! Veniam
-          atque recusandae, obcaecati porro sapiente, numquam dolor sint
-          maiores, non blanditiis molestias illo? Excepturi dolores cum
-          repellendus dolorem? Voluptatum quod sequi necessitatibus totam
-          cupiditate assumenda aut. Aliquam, doloribus ab. Aut deserunt
-          perferendis exercitationem! Temporibus provident molestias magnam cum,
-          officiis non praesentium numquam commodi porro ipsa atque quisquam
-          pariatur reiciendis doloribus accusantium alias sunt, corrupti, rem
-          libero suscipit maxime nam. Dicta sed aliquam temporibus error
-          eveniet. Vitae beatae corrupti asperiores aspernatur obcaecati dolor
-          saepe voluptate adipisci eveniet minima? Eligendi quasi aperiam,
-          dolorum itaque minima ullam placeat, o
+          For more than five years,I have been working in the financial sector.
+          From traditional organizations to new players;I know the ways and
+          practices of traditional banks and have experienced the excitement and
+          intensity of expanding fintechs. Holder of a master's degree in
+          banking and financial careers,I acknowledge finances, accounting,
+          compliance,risk management, financial analyzes, banking, and financial
+          products, etc.
         </p>
       </div>
     </div>

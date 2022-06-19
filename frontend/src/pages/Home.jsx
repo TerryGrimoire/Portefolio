@@ -5,6 +5,7 @@ import AboutMe from "../components/AboutMe";
 import arrow from "../assets/arrow.png";
 
 import "../App.css";
+import Skills from "../components/Skills";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("container");
@@ -19,27 +20,15 @@ export default function Home() {
             <img
               src={arrow}
               alt="arrow"
-              className={ouija}
+              className={bgColor !== "container" ? ouija : "hidden"}
               onMouseEnter={() => setOuija("arrow_button_hover")}
               onMouseLeave={() => setOuija("arrow_button")}
             />
           </button>
         </HashLink>
       </section>
-      <section>
-        <AboutMe />
-        <HashLink to="#About">
-          <button type="button" className="no_button">
-            <img
-              src={arrow}
-              alt="arrow"
-              className={ouija}
-              onMouseEnter={() => setOuija("arrow_button_hover")}
-              onMouseLeave={() => setOuija("arrow_button")}
-            />
-          </button>
-        </HashLink>
-      </section>
+      <AboutMe />
+      <Skills />
     </main>
   );
 }
