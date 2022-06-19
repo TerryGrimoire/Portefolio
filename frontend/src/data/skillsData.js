@@ -10,6 +10,14 @@ import github from "../assets/github.svg";
 import postman from "../assets/postman.svg";
 import figma from "../assets/figma.svg";
 import trello from "../assets/trello.svg";
+import inclusive from "../assets/inclusive.png";
+import benevolent from "../assets/benevolent.png";
+import team from "../assets/team.png";
+import adaptability from "../assets/adaptability.png";
+import motivation from "../assets/motivation.png";
+import communication from "../assets/communication.png";
+import learner from "../assets/learner.png";
+import leadership from "../assets/leadership.png";
 
 const skillsData = [
   {
@@ -76,13 +84,61 @@ const skillsData = [
     id: 10,
     title: "Figma",
     image: figma,
-    type: "hard",
+    type: "software",
   },
   {
     id: 11,
     title: "Trello",
     image: trello,
-    type: "hard",
+    type: "software",
+  },
+  {
+    id: 12,
+    title: "Inclusive",
+    image: inclusive,
+    type: "soft",
+  },
+  {
+    id: 13,
+    title: "Benevolent",
+    image: benevolent,
+    type: "soft",
+  },
+  {
+    id: 14,
+    title: "Team Player",
+    image: team,
+    type: "soft",
+  },
+  {
+    id: 15,
+    title: "Adaptability",
+    image: adaptability,
+    type: "soft",
+  },
+  {
+    id: 16,
+    title: "Communication",
+    image: communication,
+    type: "soft",
+  },
+  {
+    id: 17,
+    title: "Fast learner",
+    image: learner,
+    type: "soft",
+  },
+  {
+    id: 18,
+    title: "Self Motivation",
+    image: motivation,
+    type: "soft",
+  },
+  {
+    id: 19,
+    title: "Leadership",
+    image: leadership,
+    type: "soft",
   },
 ];
 

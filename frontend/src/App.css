@@ -143,6 +143,7 @@ header {
 .buttons_container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .button_style {
   padding: 1rem 1rem;
@@ -155,6 +156,26 @@ header {
   animation-delay: 8s;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.button_style2{
+  padding: 1rem 1rem;
+  margin: 0 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 13rem;
+}
+
+.button_style2:hover {
+  background-image: url("./assets/etincelle.gif");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selected {
+  border-bottom: blueviolet 8px solid;
 }
 
 .white {
@@ -185,6 +206,7 @@ header {
   min-height: 90vh;
   width: 100%;
   padding: 2rem 5rem;
+  text-align:center;
 }
 
 .img_medium_size {
