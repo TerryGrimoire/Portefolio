@@ -411,7 +411,7 @@ article * {
    background-position: right;
 }
 .carousel .project_container {
-  width: 65%;
+  width: 70%;
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 1.5rem;
@@ -437,5 +437,5 @@ article * {
   text-align: center;
 }
 .carousel .slide .project_container img {
-  width: 80%;
+  width: 100%;
 }

@@ -5,9 +5,9 @@ import projectData from "../data/projectData";
 
 function Projects() {
   return (
-    <div>
+    <div className="container_carousel">
       <h2 className="project_title">My Projects</h2>
-      <Carousel>
+      <Carousel autoPlay infiniteLoop interval={5000} showStatus={false}>
         {projectData.map((el) => (
           <div className="project_container" key={el.id}>
             <h4>{el.title}</h4>
