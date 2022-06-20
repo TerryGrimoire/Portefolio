@@ -21,12 +21,12 @@ function Project({ el }) {
       <div className={hover ? "project_buttons_container" : "hidden"}>
         <a href={el.github} target="_blank" rel="noreferrer">
           <button type="button" className="project_button">
-            Voir le Code 🧑‍💻
+            Code Review 👀
           </button>
         </a>
         <a href={el.website} target="_blank" rel="noreferrer">
           <button type="button" className="project_button">
-            Voir le site 🌐
+            Visit the website 🛴
           </button>
         </a>
       </div>

@@ -5,26 +5,29 @@ function Skills() {
   const [skills, setSkills] = useState("hard");
 
   return (
-    <div className="section_container">
+    <section>
       <h2>Skills</h2>
-      <button
-        type="button"
-        className={
-          skills === "hard" ? "button_style2 selected" : "button_style2"
-        }
-        onClick={() => setSkills("hard")}
-      >
-        Hard Skills
-      </button>
-      <button
-        type="button"
-        className={
-          skills === "soft" ? "button_style2 selected" : "button_style2"
-        }
-        onClick={() => setSkills("soft")}
-      >
-        Soft Skills
-      </button>
+      <div className="button_container">
+        <button
+          type="button"
+          className={
+            skills === "hard" ? "button_style2 selected" : "button_style2"
+          }
+          onClick={() => setSkills("hard")}
+        >
+          Hard Skills
+        </button>
+        <button
+          type="button"
+          className={
+            skills === "soft" ? "button_style2 selected" : "button_style2"
+          }
+          onClick={() => setSkills("soft")}
+        >
+          Soft Skills
+        </button>
+      </div>
+
       <div className="basic_flex">
         {skillsData
           .filter((el) => el.type === skills)
@@ -35,7 +38,7 @@ function Skills() {
             </div>
           ))}
       </div>
-    </div>
+    </section>
   );
 }
 

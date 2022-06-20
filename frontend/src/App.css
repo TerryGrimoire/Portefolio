@@ -25,12 +25,13 @@
 }
 
 section {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 5rem;
+  justify-content: space-around;
+  box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
+  padding-top: 2rem;
 }
 
 .hidden {
@@ -39,8 +40,8 @@ section {
 
 h2 {
   font-size: 2rem;
-  animation: appear 5s;
-  animation-delay: 8s;
+  animation: appear 3.5s;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -59,18 +60,31 @@ h2 {
 
 .bad {
   background-color: var(--dark-color);
-  color: var(--text-dark-color);
-  transition: 2s ease-in-out all;
-  animation: color-change linear;
+  color: var(--light-color);
+  animation: disappear_bad ease-in-out 5s;
+  transition: ease-in-out 2s all;
 }
 
 .good {
   background-color: var(--light-color);
-  color: var(--text-light-color);
-  transition: 2s ease-in-out all;
-  animation: color-change linear;
+  color: var(--dark-color);
+  animation: disappear_good ease-in-out 5s;
+  transition: ease-in-out 2s all;
 }
 
+
+@keyframes disappear_good {
+  0% {background-image: url(./assets/butterflies.gif);
+    background-size: 25%;}
+  50% {background-size: 30%;}
+  100% {background-size: 0;}
+}
+@keyframes disappear_bad {
+  0% {background-image: url(./assets/gosht.gif);
+    background-size: 20%;}
+  50% {background-size: 20%;}
+  100% {background-size: 0;}
+}
 header {
   display: flex;
   flex-direction: column;
@@ -84,59 +98,37 @@ header {
 }
 
 .arrow_button {
-  width: 25%;
+  width: 10%;
   transition: all ease-in-out 5s;
   cursor: pointer;
-  animation: ouija 20s infinite;
 }
 
 .arrow_button_hover {
-  width: 25%;
+  width: 10%;
   transition: all ease-in-out 5s;
   cursor: pointer;
-  animation: ouija2 0.3s;
+  animation: broom 0.5s;
   animation-fill-mode: forwards;
 }
 
-@keyframes ouija {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-8px, 8px) rotate(30deg);
-  }
-  40% {
-    transform: translate(8px, 40px);
-  }
-  60% {
-    transform: translate(20px, 40px);
-  }
-  80% {
-    transform: translate(-8px, 48px) rotate(-20deg);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes ouija2 {
+@keyframes broom {
   0% {
     transform: rotate(0deg);
   }
   20% {
-    transform: rotate(36deg);
+    transform: rotate(54deg);
   }
   40% {
-    transform: rotate(72deg);
-  }
-  60% {
     transform: rotate(108deg);
   }
+  60% {
+    transform: rotate(162deg);
+  }
   80% {
-    transform: rotate(144deg);
+    transform: rotate(216deg);
   }
   100% {
-    transform: rotate(180deg);
+    transform: rotate(270deg);
   }
 }
 
@@ -147,13 +139,13 @@ header {
 }
 .button_style {
   padding: 1rem 1rem;
-  margin: 0 2rem;
+  margin: 0.5rem 2rem 0;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
   width: 13rem;
-  animation: appear 5s;
-  animation-delay: 8s;
+  animation: appear 3.5s;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
   opacity: 0;
   box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
@@ -166,9 +158,9 @@ header {
   cursor: pointer;
   font-size: 2rem;
   width: 13rem;
-  box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
+  box-shadow: rgba(248, 122, 122, 0.55) 0px 5px 5px;
   border: none;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .button_style2:hover {
@@ -203,19 +195,25 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 25vh;
 }
 
 .section_container {
-  min-height: 90vh;
-  width: 100%;
-  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem 0;
   text-align:center;
+  height: 100vh;
 }
 
 .img_medium_size {
-  height: 50vh;
-  border-radius: 1rem;
+  height: 60vh;
+  border-radius : 50% 50% 70% 30% / 73% 0% 100% 27% ;
+  box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
+}
+
+.img_medium_size:hover {
+  background-image: url(./assets/colors.gif);
+  background-size: cover;
 }
 
 .basic_flex {
@@ -244,8 +242,7 @@ h1 {
   font-family: var(--title-font-family);
   padding: 3rem;
   line-height: 1;
-  animation: letterspacing 8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  background-image: url("./assets/sparkle.gif");
+  animation: letterspacing 5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 @keyframes letterspacing {
@@ -279,7 +276,7 @@ h1 {
 }
 
 .logo_skills {
-  height: 7rem;
+  height: 5rem;
   padding: 2rem 3rem 1rem;
 }
 
@@ -329,6 +326,10 @@ h1 {
   margin: 1rem 0;
 }
 
+.project_img:hover {
+  transform: scale(1.05);
+}
+
 .flex_no_wrap {
   display: flex;
   justify-content: space-around;
@@ -367,9 +368,52 @@ h1 {
   font-size: 1rem;
   margin: 1rem;
   cursor: pointer;
-  background-color: yellow;
+  background-color: var(--light-color);
   transition: ease-in-out all 0.5s;
 }
 .project_button:hover {
   transform: scale(1.2);
+}
+
+.article_container {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  padding: 2rem;
+}
+article * {
+  padding: 0.5rem;
+}
+
+.flex_container {
+  display: flex;
+  align-items: center;
+}
+
+.span {
+  color: var(--other-color);
+  font-size: 2rem;
+}
+
+.finance:hover {
+  background-image: url(./assets/coin.gif);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.travel:hover {
+  background-image: url(./assets/travel.gif);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.coding:hover {
+   background-image: url(./assets/code.gif);
+   background-size: 15%;
+   background-repeat: no-repeat;
+   background-position: right;
 }

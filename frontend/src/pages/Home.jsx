@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import Header from "../components/header";
 import AboutMe from "../components/AboutMe";
-import arrow from "../assets/arrow.png";
+import broom from "../assets/broom.gif";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 
@@ -19,8 +19,8 @@ export default function Home() {
         <HashLink to="#About">
           <button type="button" className="no_button">
             <img
-              src={arrow}
-              alt="arrow"
+              src={broom}
+              alt="broom"
               className={bgColor !== "container" ? ouija : "hidden"}
               onMouseEnter={() => setOuija("arrow_button_hover")}
               onMouseLeave={() => setOuija("arrow_button")}
@@ -28,9 +28,13 @@ export default function Home() {
           </button>
         </HashLink>
       </section>
-      <AboutMe bgColor={bgColor} />
-      <Skills bgColor={bgColor} />
-      <Projects bgColor={bgColor} />
+      {bgColor !== "container" && (
+        <div>
+          <AboutMe bgColor={bgColor} />
+          <Skills bgColor={bgColor} />
+          <Projects bgColor={bgColor} />
+        </div>
+      )}
     </main>
   );
 }

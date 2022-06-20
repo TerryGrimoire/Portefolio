@@ -13,9 +13,9 @@ export default function Header({ setBgColor }) {
 
   useEffect(() => {
     if (good) {
-      setBgColor("good");
+      setBgColor("good good_animation");
     } else if (bad) {
-      setBgColor("bad");
+      setBgColor("bad  bad_animation");
     } else {
       setBgColor("container");
     }
