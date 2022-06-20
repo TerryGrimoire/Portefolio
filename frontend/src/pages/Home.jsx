@@ -3,9 +3,10 @@ import { HashLink } from "react-router-hash-link";
 import Header from "../components/header";
 import AboutMe from "../components/AboutMe";
 import arrow from "../assets/arrow.png";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 
 import "../App.css";
-import Skills from "../components/Skills";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("container");
@@ -27,8 +28,9 @@ export default function Home() {
           </button>
         </HashLink>
       </section>
-      <AboutMe />
-      <Skills />
+      <AboutMe bgColor={bgColor} />
+      <Skills bgColor={bgColor} />
+      <Projects bgColor={bgColor} />
     </main>
   );
 }

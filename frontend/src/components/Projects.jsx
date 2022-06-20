@@ -1,26 +1,12 @@
 import React from "react";
 import projectData from "../data/projectData";
+import Project from "./Project";
 
-function Projects() {
+function Projects({ bgColor }) {
   return (
-    <div>
+    <div className="projects_container">
       {projectData.map((el) => (
-        <div>
-          <img src={el.image} alt={el.title} />
-          <h4>{el.title}</h4>
-          <p>{el.description}</p>
-          {el.technologies.map((element) => (
-            <p className="project_technologies">{element} </p>
-          ))}
-          <div className="Project_buttons_container">
-            <a href={el.github} target="_blank" rel="noreferrer">
-              <button type="button">Voir le Code</button>{" "}
-            </a>
-            <a href={el.website} target="_blank" rel="noreferrer">
-              <button type="button">Voir le site</button>{" "}
-            </a>
-          </div>
-        </div>
+        <Project el={el} bgColor={bgColor} />
       ))}
     </div>
   );
