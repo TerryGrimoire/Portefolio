@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Project({ el }) {
-  const [hover, setHover] = useState(false);
-
   return (
-    <div
-      className="project_container"
-      key={el.id}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
+    <div className="project_container" key={el.id}>
       <h4>{el.title}</h4>
       <img src={el.image} alt={el.title} className="project_img" />
       <p>{el.description}</p>
@@ -18,7 +11,7 @@ function Project({ el }) {
           <p className="project_technologies">{element} </p>
         ))}
       </div>
-      <div className={hover ? "project_buttons_container" : "hidden"}>
+      <div className="project_buttons_container">
         <a href={el.github} target="_blank" rel="noreferrer">
           <button type="button" className="project_button">
             Code Review 👀

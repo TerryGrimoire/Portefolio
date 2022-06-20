@@ -11,7 +11,7 @@ function Skills() {
         <button
           type="button"
           className={
-            skills === "hard" ? "button_style2 selected" : "button_style2"
+            skills === "hard" ? "button_style2 selected_item" : "button_style2"
           }
           onClick={() => setSkills("hard")}
         >
@@ -20,7 +20,7 @@ function Skills() {
         <button
           type="button"
           className={
-            skills === "soft" ? "button_style2 selected" : "button_style2"
+            skills === "soft" ? "button_style2 selected_item" : "button_style2"
           }
           onClick={() => setSkills("soft")}
         >
