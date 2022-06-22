@@ -24,6 +24,7 @@
   font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
+
 section {
   height: 100vh;
   display: flex;
@@ -94,6 +95,15 @@ header {
 .no_button {
   border: none;
   background-color: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 50px;
+  right: 0;
 }
 
 .arrow_button {
@@ -116,19 +126,19 @@ header {
     transform: rotate(0deg);
   }
   20% {
-    transform: rotate(54deg);
+    transform: rotate(-54deg);
   }
   40% {
-    transform: rotate(108deg);
+    transform: rotate(-108deg);
   }
   60% {
-    transform: rotate(162deg);
+    transform: rotate(-162deg);
   }
   80% {
-    transform: rotate(216deg);
+    transform: rotate(-216deg);
   }
   100% {
-    transform: rotate(270deg);
+    transform: rotate(-270deg);
   }
 }
 
@@ -216,7 +226,7 @@ header {
 }
 
 .img_medium_size {
-  height: 60vh;
+  width: 55vw;
   border-radius : 50% 50% 70% 30% / 73% 0% 100% 27% ;
   box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
 }
@@ -380,10 +390,15 @@ display: block;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 4rem 2rem;
+}
+
+.article_container p {
+  margin-bottom: 1rem;
 }
 
 article {
-  padding: 0 2rem 2rem;
+ 
   font-size: 0.8rem;
 }
 
@@ -395,6 +410,9 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.article_container .no_margin {
+  margin-bottom: 0;
 }
 a {
   color: initial;
@@ -479,6 +497,7 @@ a {
   height: 100%;
   width: 100%;
   text-align: center;
+  z-index: 2;
 }
 
 .contact_form > * {
@@ -521,15 +540,9 @@ textarea:focus, input:focus {
   border-radius: 0.25rem;
   margin: 0 3rem;
   padding: 0.5rem 2rem;
- 
 }
 
-.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
-  background: blueviolet;
-  opacity: 10%;
-}
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1400px){
 
   * {
     font-size: 1.1rem;
@@ -539,9 +552,12 @@ textarea:focus, input:focus {
     box-shadow: none;
     align-items: center;
   }
+  .section_container {
+    padding: 2rem;
+  }
 h1 {
   font-size: 3.5rem;
-  margin-bottom: 5rem;
+  margin-bottom:0;
 }
 
 h2 {
@@ -559,8 +575,8 @@ h2 {
   margin: 1rem 1rem 3rem;
 }
 
-.no_button {
-  display: none;
+.arrow_button {
+  width: 30%;
 }
 
 .section_container {

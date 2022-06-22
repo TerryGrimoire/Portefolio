@@ -70,9 +70,7 @@ function AboutMe({ bgColor }) {
               rel="noreferrer"
               className="flex_container about_me_a"
             >
-              <p>
-                <span className="span_mobile"> Visit my </span> Github profile
-              </p>
+              <p className="no_margin">Github profile</p>
               <img src={github} alt="github" className="about_me_img" />
             </a>
             <a
@@ -81,9 +79,7 @@ function AboutMe({ bgColor }) {
               rel="noreferrer"
               className="flex_container about_me_a"
             >
-              <p>
-                <span className="span_mobile"> Visit my </span>Linkedin profile{" "}
-              </p>
+              <p className="no_margin">Linkedin profile</p>
               <img src={linkedin} alt="linkedin" className="about_me_img" />
             </a>
           </div>
