@@ -53,23 +53,27 @@ function AboutMe() {
               this is what I am meant to be.
             </p>
           </article>
-          <div className="flex_container">
+          <div className="flex_container about_me_mobile">
             <a
               href="https://github.com/TerryGrimoire"
               target="_blank"
               rel="noreferrer"
-              className="flex_container abount_me_a"
+              className="flex_container about_me_a"
             >
-              <p>Visit my Github profile</p>
+              <p>
+                <span className="span_mobile"> Visit my </span> Github profile
+              </p>
               <img src={github} alt="github" className="about_me_img" />
             </a>
             <a
               href="https://www.linkedin.com/in/terry-grimoire/"
               target="_blank"
               rel="noreferrer"
-              className="flex_container abount_me_a"
+              className="flex_container about_me_a"
             >
-              <p>Visit my Linkedin profile </p>
+              <p>
+                <span className="span_mobile"> Visit my </span>Linkedin profile{" "}
+              </p>
               <img src={linkedin} alt="linkedin" className="about_me_img" />
             </a>
           </div>

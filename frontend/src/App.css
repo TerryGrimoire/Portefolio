@@ -400,14 +400,14 @@ a {
   color: initial;
   text-decoration: none;
 }
-.abount_me_a{
+.about_me_a{
   box-shadow: rgba(248, 122, 122, 0.55) 2px 2px 5px;
   background-color: var(--light-color);
   border-radius: 0.25rem;
   margin: 0 3rem;
   padding: 1rem 0.5rem;
 }
-.abount_me_a:hover {
+.about_me_a:hover {
   transform: scale(1.05);
   z-index: 2;
 }
@@ -525,6 +525,10 @@ textarea:focus, input:focus {
 }
 
 @media screen and (max-width: 768px){
+
+  * {
+    font-size: 1.1rem;
+  }
   section {
     height: min-content;
     box-shadow: none;
@@ -536,7 +540,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .acc {
@@ -547,7 +551,7 @@ h2 {
   font-size: 1rem;
   padding: 0.5rem 0.5rem;
   width: 8rem;
-  margin: 5rem 1rem 10rem;
+  margin: 1rem 1rem 3rem;
 }
 
 .no_button {
@@ -562,6 +566,120 @@ h2 {
   flex-direction: column;
 }
 
+@keyframes disappear_good {
+  0% {background-image: url(./assets/butterflies.gif);
+    background-size: 50%;}
+  50% {background-size: 60%;}
+  100% {background-size: 0;}
+}
+@keyframes disappear_bad {
+  0% {background-image: url(./assets/gosht.gif);
+    background-size: 35%;}
+  50% {background-size: 40%;}
+  100% {background-size: 0;}
+}
 
+.img_medium_size {
+  width: 23rem;
+  height:auto;
+  margin: 5rem 0;
+}
 
+.about_me_mobile {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+}
+
+.about_me_a {
+  width: 10rem;
+  padding: 0.25rem;
+  margin: 0 0.25rem 5rem;
+}
+
+.span_mobile {
+  display: none;
+}
+
+.button_container {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+}
+
+.button_style2 {
+  font-size: 1rem;
+  margin: 0.25rem;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.basic_flex {
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.skill_container {
+  width: 8rem;
+  margin: 1rem;
+  padding: 2rem 1rem;
+ 
+}
+.skill_container P {
+  overflow: hidden;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.logo_skills {
+margin: 0;
+padding: 0;
+height: 2rem;
+overflow: hidden;
+}
+
+.carousel .project_container {
+  width: 90%;
+  border-radius: 0.5rem;
+}
+
+.carousel h4 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.carousel .project_container .project_img {
+  
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.carousel .project_buttons_container {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+margin: 0 1rem 1rem;
+padding: 0;
+}
+
+.carousel .project_button {
+  font-size: 0.9rem;
+  margin: 0 0.5rem 0.5rem;
+}
+
+.contact_form input {
+  width: 19rem;
+}
+
+.contact_form textarea {
+  width: 19rem;
+  height: 12rem;
+}
+.contact_form .contact_button {
+  margin-bottom: 3rem;
+}
 }

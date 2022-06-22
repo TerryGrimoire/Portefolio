@@ -15,7 +15,7 @@ function Contact() {
         </label>
         <label htmlFor="Phone">
           Number Phone
-          <input type="phone_number" placeholder="Enter your phone number" />
+          <input type="tel" placeholder="Enter your phone number" />
         </label>
         <label htmlFor="message">
           Votre message

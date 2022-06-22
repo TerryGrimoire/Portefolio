@@ -14,8 +14,8 @@ function Projects() {
               <img src={el.image} alt={el.title} className="project_img" />
             </a>
             <h4>{el.title}</h4>
-            <p>{el.description}</p>
-            <div className="flex_no_wrap">
+            <p className="span_mobile">{el.description}</p>
+            <div className="flex_no_wrap span_mobile">
               {el.technologies.map((element) => (
                 <p className="project_technologies">{element} </p>
               ))}
