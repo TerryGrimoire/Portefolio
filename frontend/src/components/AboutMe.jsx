@@ -1,5 +1,7 @@
 import React from "react";
 import terry from "../assets/terry.png";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
 
 function AboutMe() {
   return (
@@ -12,7 +14,7 @@ function AboutMe() {
         <div className="article_container">
           <article>
             <h3 className="finance">
-              <span className="span">5</span>years in Financial Sector
+              <span className="span"> 5 </span>years in Financial Sector
             </h3>
             <p>
               For more than five years, I have been working in the financial
@@ -51,6 +53,26 @@ function AboutMe() {
               this is what I am meant to be.
             </p>
           </article>
+          <div className="flex_container">
+            <a
+              href="https://github.com/TerryGrimoire"
+              target="_blank"
+              rel="noreferrer"
+              className="flex_container abount_me_a"
+            >
+              <p>Visit my Github profile</p>
+              <img src={github} alt="github" className="about_me_img" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/terry-grimoire/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex_container abount_me_a"
+            >
+              <p>Visit my Linkedin profile </p>
+              <img src={linkedin} alt="linkedin" className="about_me_img" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
