@@ -319,7 +319,7 @@ display: block;
 }
 
 .project_container p {
-  padding: 0 3rem;
+  padding: 0.51rem 1rem;
 }
 
 .project_img {
@@ -437,11 +437,15 @@ a {
    background-position: right;
 }
 .carousel .project_container {
-  width: 75%;
+  width: 50%;
   justify-content: center;
   margin: 2rem auto 3rem;
-  box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
+  box-shadow: rgba(248, 122, 122, 0.55) 2px 2px 5px;
   border-radius: 2rem;
+  background-color: var(--dark-color);
+}
+.carousel .project_container:hover {
+  transform: scale(1.05);
 }
 
 .carousel h4 {
@@ -463,7 +467,7 @@ a {
 }
 
 .about_me_img {
-  width: 10%;
+  width: 18%;
   padding: 0 0.35rem;
 }
 
@@ -472,7 +476,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 50%;
+  height: 100%;
   width: 100%;
   text-align: center;
 }
@@ -490,6 +494,7 @@ a {
   border-radius: 0.35rem;
   box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
   border: none;
+  margin-top: 0.5REM;
 }
 textarea {
   height: 15rem;
@@ -499,6 +504,7 @@ textarea {
   box-shadow: rgba(248, 122, 122, 0.55) 5px 5px 15px;
   border: none;
   resize: none;
+  margin-top: 0.5REM;
 }
 
 textarea:focus, input:focus {
@@ -507,4 +513,55 @@ textarea:focus, input:focus {
 
 .skills_title {
   margin-top: 2rem;
+}
+
+.contact_button {
+  box-shadow: rgba(248, 122, 122, 0.55) 2px 2px 5px;
+  background-color: var(--light-color);
+  border-radius: 0.25rem;
+  margin: 0 3rem;
+  padding: 0.5rem 2rem;
+ 
+}
+
+@media screen and (max-width: 768px){
+  section {
+    height: min-content;
+    box-shadow: none;
+    align-items: center;
+  }
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.acc {
+  margin-bottom: 5rem;
+}
+
+.button_style {
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  width: 8rem;
+  margin: 5rem 1rem 10rem;
+}
+
+.no_button {
+  display: none;
+}
+
+.section_container {
+  height: fit-content;
+  flex-direction: column;
+}
+.flex_container {
+  flex-direction: column;
+}
+
+
+
 }

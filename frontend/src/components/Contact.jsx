@@ -3,8 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <section>
-      <h2>Contact me</h2>
-
+      <h2 className="skills_title">Contact me</h2>
       <form action="form" className="contact_form">
         <label htmlFor="name">
           Name
@@ -22,7 +21,9 @@ function Contact() {
           Votre message
           <textarea type="text" />
         </label>
-        <button type="submit"> Submit</button>
+        <button type="submit" className="contact_button">
+          Submit
+        </button>
       </form>
     </section>
   );

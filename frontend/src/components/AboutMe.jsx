@@ -7,7 +7,7 @@ function AboutMe() {
   return (
     <section id="About" className="section_container">
       <h2>
-        About <span className="span">me</span>{" "}
+        About <span className="span">me</span>
       </h2>
       <div className="flex_container">
         <img src={terry} alt="terry" className="img_medium_size" />
