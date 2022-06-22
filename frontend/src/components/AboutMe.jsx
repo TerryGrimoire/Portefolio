@@ -1,16 +1,26 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import terry from "../assets/terry.png";
+import Goodwitch from "../assets/Goodwitch.png";
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 
-function AboutMe() {
+function AboutMe({ bgColor }) {
   return (
     <section id="About" className="section_container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Grimoire Portfolio | About Me </title>
+      </Helmet>
       <h2>
         About <span className="span">me</span>
       </h2>
       <div className="flex_container">
-        <img src={terry} alt="terry" className="img_medium_size" />
+        <img
+          src={bgColor.includes("good") ? Goodwitch : terry}
+          alt="terry"
+          className="img_medium_size"
+        />
         <div className="article_container">
           <article>
             <h3 className="finance">

@@ -524,6 +524,11 @@ textarea:focus, input:focus {
  
 }
 
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  background: blueviolet;
+  opacity: 10%;
+}
+
 @media screen and (max-width: 768px){
 
   * {

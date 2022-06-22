@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import { Helmet } from "react-helmet";
 import Header from "../components/header";
 import AboutMe from "../components/AboutMe";
 import broom from "../assets/broom.gif";
@@ -15,6 +16,10 @@ export default function Home() {
 
   return (
     <main className={bgColor}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Grimoire Portfolio | Home </title>
+      </Helmet>
       <section>
         <Header setBgColor={setBgColor} />
         <HashLink to="#About">
